@@ -1,1 +1,1 @@
-export { SmartSparrow as default } from './SmartSparrow';
+export { Delivery as default } from './Delivery';
