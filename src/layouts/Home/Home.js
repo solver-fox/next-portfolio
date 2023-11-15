@@ -17,8 +17,7 @@ import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
-
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+import { author, disciplines, meta_title, meta_description, project } from 'contents/home';
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -68,9 +67,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of Hamish Williams — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title={meta_title}
+        description={meta_description}
       />
       <Intro
         id="intro"
@@ -83,13 +81,13 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        title={project[1].title}
+        description={project[1].description}
+        buttonText={project[1].buttonText}
+        buttonLink={project[1].buttonLink}
         model={{
-          type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          type: project[1].type,
+          alt: project[1].alt,
           textures: [
             {
               srcSet: [sprTexture, sprTextureLarge],
@@ -104,13 +102,13 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title={project[2].title}
+        description={project[2].description}
+        buttonText={project[2].buttonText}
+        buttonLink={project[2].buttonLink}
         model={{
-          type: 'phone',
-          alt: 'App login screen',
+          type: project[2].type,
+          alt: project[2].alt,
           textures: [
             {
               srcSet: [gamestackTexture, gamestackTextureLarge],
@@ -128,13 +126,13 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title={project[3].title}
+        description={project[3].description}
+        buttonText={project[3].buttonText}
+        buttonLink={project[3].buttonLink}
         model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          type: project[3].type,
+          alt: project[3].alt,
           textures: [
             {
               srcSet: [sliceTexture, sliceTextureLarge],
