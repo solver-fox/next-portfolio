@@ -6,7 +6,7 @@ export const delivery = {
         'Front End Development',
         'Project Test'
     ],
-    url: "https://www.hellofresh.com.au/plans",
+    url: "https://www.hellofresh.com.au/",
     detail: {
         problem: `In 2017, Smart Sparrow began a project to build an entirely new platform to
         from the ground up to serve as the most powerful tool for educators to
@@ -15,6 +15,7 @@ export const delivery = {
         moving the platform to Javascript. The primary goals for the project were
         reducing barriers to collaboration, and making the platform both easier for
         new users, but with plenty of room to scale for advanced users.`,
-        outcome: `Collaborated with designers and product owners to build security platforms that are safe from potential threats and vulnerabilities.`
+        outcome: `Collaborated with designers and product owners to build security platforms that are safe from potential threats and vulnerabilities.
+        Developed and maintained a delivery web application that increased revenue by 15% and user engagement by 20% within the first two months.`
     }
 };
