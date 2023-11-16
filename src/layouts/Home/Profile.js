@@ -6,26 +6,38 @@ import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
 import { Image } from 'components/Image';
-import { Link } from 'components/Link';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import { profile } from 'contents/home';
+import { profile, skills } from 'contents/home';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
       <DecoderText text={profile.heading} start={visible} delay={500} />
     </Heading>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      {profile.description[0]}
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      {profile.description[1]}
-    </Text>
+    {
+      profile.description.map((desc, index) =>
+        <Text key={index} className={styles.description} data-visible={visible} size="l" as="p">
+          {desc}
+        </Text>
+      )
+    }
+    {
+      skills.map((skillSet, index) =>
+        <div key={index}>
+          <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
+            <DecoderText text={skillSet.heading} start={visible} delay={500} />
+          </Heading>
+          <Text key={index} className={styles.description} data-visible={visible} size="l" as="p">
+            {skillSet.desc}
+          </Text>
+        </div>
+      )
+    }
   </Fragment>
 );
 

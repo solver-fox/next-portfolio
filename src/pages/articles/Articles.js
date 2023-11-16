@@ -23,7 +23,6 @@ const ArticlesPost = ({
   date,
   featured,
   banner,
-  timecode,
   index,
 }) => {
   const [hovered, setHovered] = useState(false);
@@ -50,7 +49,7 @@ const ArticlesPost = ({
     >
       {featured && (
         <Text className={styles.postLabel} size="s">
-          Featured
+          Latest
         </Text>
       )}
       {featured && !!banner && (
@@ -65,82 +64,27 @@ const ArticlesPost = ({
           />
         </div>
       )}
-      <RouterLink href={`/articles/${slug}`} scroll={false}>
-        <a
-          className={styles.postLink}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className={styles.postDetails}>
-            <div aria-hidden className={styles.postDate}>
-              <Divider notchWidth="64px" notchHeight="8px" />
-              {dateTime}
-            </div>
-            <Heading as="h2" level={featured ? 2 : 4}>
-              {title}
-            </Heading>
-            <Text size={featured ? 'l' : 's'} as="p">
-              {abstract}
-            </Text>
-            <div className={styles.postFooter}>
-              <Button secondary iconHoverShift icon="chevronRight" as="div">
-                Read article
-              </Button>
-              <Text className={styles.timecode} size="s">
-                {timecode}
-              </Text>
-            </div>
-          </div>
-        </a>
-      </RouterLink>
-      {featured && (
-        <Text aria-hidden className={styles.postTag} size="s">
-          477
-        </Text>
-      )}
-    </article>
-  );
-};
-
-const SkeletonPost = ({ index }) => {
-  return (
-    <article
-      aria-hidden="true"
-      className={classes(styles.post, styles.skeleton)}
-      style={index !== undefined ? cssProps({ delay: index * 100 + 200 }) : undefined}
-    >
-      <div className={styles.postLink}>
+      <a
+        className={styles.postLink}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className={styles.postDetails}>
           <div aria-hidden className={styles.postDate}>
             <Divider notchWidth="64px" notchHeight="8px" />
-            Coming soon...
+            {dateTime}
           </div>
-          <Heading
-            className={styles.skeletonBone}
-            as="h2"
-            level={4}
-            style={{ height: 24, width: '70%' }}
-          />
-          <Text
-            className={styles.skeletonBone}
-            size="s"
-            as="p"
-            style={{ height: 90, width: '100%' }}
-          />
-          <div className={styles.postFooter}>
-            <Button secondary iconHoverShift icon="chevronRight" as="div">
-              Read more
-            </Button>
-            <Text className={styles.timecode} size="s">
-              00:00:00:00
-            </Text>
-          </div>
+          <Heading as="h2" level={featured ? 2 : 4}>
+            {title}
+          </Heading>
+          <Text size={featured ? 'l' : 's'} as="p">
+            {abstract}
+          </Text>
         </div>
-      </div>
+      </a>
     </article>
   );
 };
-
 export const Articles = ({ posts, featured }) => {
   const { width } = useWindowSize();
   const singleColumnWidth = 1190;
@@ -149,7 +93,7 @@ export const Articles = ({ posts, featured }) => {
   const postsHeader = (
     <header className={styles.header}>
       <Heading className={styles.heading} level={5} as="h1">
-        <DecoderText text="Latest articles" />
+        <DecoderText text="Charles's career" />
       </Heading>
       <Barcode />
     </header>
@@ -161,11 +105,6 @@ export const Articles = ({ posts, featured }) => {
       {posts.map(({ slug, ...post }, index) => (
         <ArticlesPost key={slug} slug={slug} index={index} {...post} />
       ))}
-      {Array(2)
-        .fill()
-        .map((skeleton, index) => (
-          <SkeletonPost key={index} />
-        ))}
     </div>
   );
 

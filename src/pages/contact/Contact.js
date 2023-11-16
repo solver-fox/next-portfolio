@@ -13,6 +13,7 @@ import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
 import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
+import emailjs from "@emailjs/browser";
 import styles from './Contact.module.css';
 
 export const Contact = () => {
@@ -30,37 +31,34 @@ export const Contact = () => {
 
     if (sending) return;
 
-    try {
-      setSending(true);
+    setSending(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.value,
-          message: message.value,
-        }),
+    const templateParams = {
+      from_email: email.value,
+      message: message.value
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then((response) => {
+        const statusError = getStatusError({
+          status: response?.status,
+          errorMessage: response?.error,
+          fallback: 'There was a problem sending your message',
+        });
+        if (statusError) throw new Error(statusError);
+        setComplete(true);
+        setSending(false);
+      })
+      .catch((error) => {
+        setSending(false);
+        setStatusError(error.message);
       });
-
-      const responseMessage = await response.json();
-
-      const statusError = getStatusError({
-        status: response?.status,
-        errorMessage: responseMessage?.error,
-        fallback: 'There was a problem sending your message',
-      });
-
-      if (statusError) throw new Error(statusError);
-
-      setComplete(true);
-      setSending(false);
-    } catch (error) {
-      setSending(false);
-      setStatusError(error.message);
-    }
   };
 
   return (

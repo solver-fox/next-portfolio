@@ -33,14 +33,28 @@ export const project = {
 
 export const profile = {
     heading: "Hi, there",
-    description: [`I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-    <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-    animations, and icon illustration. Being comfortable with code allows me to rapidly
-    prototype and validate experiences. If you’re interested in the tools and software I
-    use check out my <Link href="/uses">uses page</Link>.`,
-
-        `In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-    <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-    about new projects, so feel free to drop me a line.`],
+    description: [
+        "Highly skilled Senior Full Stack Developer with a decade of experience in designing, developing, testing, deploying and maintaining web applications using modern technologies such as React, Node.js and MongoDB.",
+        "Effectively led full stack development resulting reduced development time, mentoring junior developers.",
+        "Skills: React, Angular, Vue, JavaScript, Node.js, MongoDB"
+    ],
     imageAlt: "Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
 };
+
+export const skills = [
+    {
+        heading: "Frontend",
+        desc: "React.js, Vue.js, Javascript, Typescript, HTML, CSS, BootStrap and Tailwind"
+    },
+    {
+        heading: "Backend",
+        desc: "Node.js, Express.js, Mongoose, JWT, Bcrypt, Web3.js and Python Django"
+    },
+    {
+        heading: "Cloud Hosting",
+        desc: "AWS, Firebase, Netflify and Heroku"
+    },
+    {
+        heading: "Database"
+    }
+];
