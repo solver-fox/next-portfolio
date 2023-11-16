@@ -7,14 +7,17 @@ import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTextureLarge from 'assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/delivery/large.png';
+import sprTextureLarge from 'assets/delivery/dashboard.png';
 // import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import sprTexturePlaceholder from 'assets/delivery/dashboard.png';
+// import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
+import sprTexture from 'assets/delivery/dashboard_2.png';
+// import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
 import { Profile } from 'layouts/Home/Profile';
+import { Skill } from 'layouts/Home/Skill';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
@@ -28,9 +31,10 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const details = useRef();
+  const skills = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, details, skills];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -141,6 +145,11 @@ export const Home = () => {
             },
           ],
         }}
+      />
+      <Skill
+        sectionRef={skills}
+        visible={visibleSections.includes(skills.current)}
+        id="skills"
       />
       <Profile
         sectionRef={details}

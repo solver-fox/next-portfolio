@@ -35,8 +35,7 @@ export const profile = {
     heading: "Hi, there",
     description: [
         "Highly skilled Senior Full Stack Developer with a decade of experience in designing, developing, testing, deploying and maintaining web applications using modern technologies such as React, Node.js and MongoDB.",
-        "Effectively led full stack development resulting reduced development time, mentoring junior developers.",
-        "Skills: React, Angular, Vue, JavaScript, Node.js, MongoDB"
+        "Effectively led full stack development resulting reduced development time, mentoring junior developers."
     ],
     imageAlt: "Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
 };
@@ -55,6 +54,19 @@ export const skills = [
         desc: "AWS, Firebase, Netflify and Heroku"
     },
     {
-        heading: "Database"
+        heading: "Database",
+        desc: "MongoDB, MySQL, SQLite"
+    },
+    {
+        heading: "Project management",
+        desc: "Git, Github, Jira, Trello, Bitbucket, SVN, Heroku"
+    },
+    {
+        heading: "Soft Skills",
+        desc: "Team Collaboration, Coaching & Mentoring, Agile Methodology, Problem Solving"
+    },
+    {
+        heading: "Interests",
+        desc: "Artificial Intelligence, Embeded Device, OS & Network"
     }
 ];
