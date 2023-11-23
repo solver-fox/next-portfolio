@@ -1,7 +1,7 @@
 export const author = "Charles Hardy";
 export const title_prefix = 'Senior';
 export const disciplines = ['Fullstack Developer', 'Frontend Developer', 'Backend Developer', 'Web Developer'];
-export const meta_title = "Senior Developer";
+export const meta_title = "Senior Fullstack Engineer";
 export const meta_description = "Portfolio of Charles Hardy";
 
 export const project = {
@@ -14,18 +14,18 @@ export const project = {
         alt: 'Smart Sparrow lesson builder',
     },
     2: {
-        title: "Biomedical image collaboration",
-        description: "Increasing the amount of collaboration in Slice, an app for biomedical imaging",
+        title: "E-Commerce Website",
+        description: "Built for a Computer & Components Hardware Company",
         buttonText: "View website",
-        buttonLink: "https://gamestack.hamishw.com",
+        buttonLink: "https://pronolimitshop.com/",
         type: 'phone',
         alt: 'App login screen',
     },
     3: {
         title: "Hospital Manage System",
-        description: "Hostpital manage system with Php",
+        description: "This a a website, where we can control all the management related to a hospital online, like admitting patient, booking bed, booking ambulance, managing payment and more.",
         buttonText: "View project",
-        buttonLink: "/projects/slice",
+        buttonLink: "/projects/hospital",
         type: 'laptop',
         alt: 'Annotating a biomedical image in the Slice app',
     }
@@ -35,7 +35,10 @@ export const profile = {
     heading: "Hi, there",
     description: [
         "Highly skilled Senior Full Stack Developer with a decade of experience in designing, developing, testing, deploying and maintaining web applications using modern technologies such as React, Node.js and MongoDB.",
+        "Love to design and create responsive websites or web apps from scratch.",
+        "Have eagerness to learn something new every day and I love to share my knowledge to my fellow students and developers. ",
         "Effectively led full stack development resulting reduced development time, mentoring junior developers."
+
     ],
     imageAlt: "Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
 };

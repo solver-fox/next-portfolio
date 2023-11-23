@@ -1,16 +1,16 @@
 import backgroundSprLarge from 'assets/spr-background-large.jpg';
 import backgroundSprPlaceholder from 'assets/spr-background-placeholder.jpg';
 import backgroundSpr from 'assets/spr-background.jpg';
-import imageSprLessonBuilderDarkLarge from 'assets/delivery/detail.png';
+import imageSprLessonBuilderDarkLarge from 'assets/delivery/image.png';
 import imageSprLessonBuilderDarkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprLessonBuilderDark from 'assets/delivery/detail.png';
-import imageSprLessonBuilderLightLarge from 'assets/delivery/detail.png';
-import imageSprLessonBuilderLightPlaceholder from 'assets/spr-lesson-builder-light-placeholder.jpg';
-import imageSprLessonBuilderLight from 'assets/delivery/detail.png';
+import imageSprLessonBuilderDark from 'assets/delivery/image.png';
+import recipeSprLarge from 'assets/delivery/recipe.png';
+import recipeSpr from 'assets/delivery/recipe.png';
 import { Footer } from 'components/Footer';
 import { Link } from 'components/Link';
 import { Meta } from 'components/Meta';
 import { useTheme } from 'components/ThemeProvider';
+import { Image } from 'components/Image';
 import {
   ProjectBackground,
   ProjectContainer,
@@ -37,10 +37,10 @@ export const Delivery = () => {
       <ProjectContainer className="spr">
         <Meta title={title} prefix="Projects" description={description} />
         <ProjectBackground
-          opacity={isDark ? 0.5 : 0.8}
-          src={backgroundSpr}
-          srcSet={`${backgroundSpr.src} 1080w, ${backgroundSprLarge.src} 2160w`}
+          srcSet={[backgroundSpr, backgroundSprLarge]}
           placeholder={backgroundSprPlaceholder}
+          opacity={0.2} sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+
         />
         <ProjectHeader
           title={title}
@@ -48,27 +48,16 @@ export const Delivery = () => {
           url={url}
           roles={roles}
         />
-        <ProjectSection padding="top">
-          <ProjectSectionContent>
-            <ProjectImage
-              raised
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprLessonBuilderDark, imageSprLessonBuilderDarkLarge]
-                  : [imageSprLessonBuilderLight, imageSprLessonBuilderLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprLessonBuilderDarkPlaceholder
-                  : imageSprLessonBuilderLightPlaceholder
-              }
-              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
+        <ProjectSection
+          // backgroundElement={
+          //   <Image
+          //     srcSet={[imageSprLessonBuilderDark, imageSprLessonBuilderDarkLarge]}
+          //     placeholder={imageSprLessonBuilderDarkPlaceholder}
+          //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
+          //     sizes={`100vw`}
+          //   />
+          // }
+          >
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
             <ProjectSectionText>
@@ -76,7 +65,16 @@ export const Delivery = () => {
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
-        <ProjectSection>
+        <ProjectSection
+          // backgroundElement={
+          //   <Image
+          //     srcSet={[recipeSpr, recipeSprLarge]}
+          //     placeholder={imageSprLessonBuilderDarkPlaceholder}
+          //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
+          //     sizes={`100vw`}
+          //   />
+          // }
+          >
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
