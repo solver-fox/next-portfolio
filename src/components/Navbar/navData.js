@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     label: 'Career',
-    pathname: '/articles',
+    pathname: '/career',
   },
   {
     label: 'Contact',
