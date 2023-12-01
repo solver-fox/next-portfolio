@@ -1,7 +1,6 @@
 import profileImgLarge from 'assets/skills.jpg';
-import profileImgPlaceholder from 'assets/skills.jpg';
+import profileImgPlaceholder from 'assets/skills-placeholder.jpg';
 import profileImg from 'assets/skills.jpg';
-import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';

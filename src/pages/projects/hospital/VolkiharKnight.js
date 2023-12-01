@@ -1,11 +1,11 @@
 import volkiharBackgroundLarge from 'assets/hospital/operation.png';
-import volkiharBackgroundPlaceholder from 'assets/hospital/dashboard.png';
+import volkiharBackgroundPlaceholder from 'assets/hospital/operation-placeholder.png';
 import volkiharBackground from 'assets/hospital/operation.png';
 import volkiharEnderalLarge from 'assets/hospital/bed.jpg';
-import volkiharEnderalPlaceholder from 'assets/hospital/bed.jpg';
+import volkiharEnderalPlaceholder from 'assets/hospital/bed-placeholder.jpg';
 import volkiharEnderal from 'assets/hospital/bed.jpg';
 import volkiharProblemLarge from 'assets/hospital/dashboard.png';
-import volkiharProblemPlaceholder from 'assets/hospital/dashboard.png';
+import volkiharProblemPlaceholder from 'assets/hospital/dashboard-placeholder.png';
 import volkiharProblem from 'assets/hospital/dashboard.png';
 import { Button } from 'components/Button';
 import { Footer } from 'components/Footer';
