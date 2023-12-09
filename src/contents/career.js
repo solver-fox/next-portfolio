@@ -1,43 +1,43 @@
 export const careers = {
-    "Emonics": {
-        title: "Senior Full Stack Developer (Emonics, LLC)",
-        abstract: `Spearheaded the development of a delivery web application, contributing to a 15% increase in revenue and a 20% boost in user engagement within the first two months. Collaborated with designers and product owners to establish robust security platforms, ensuring protection against potential threats and vulnerabilities. Mentored and coached junior developers, elevating team satisfaction by 10% and enhancing overall productivity.`,
+    "HelloFresh": {
+        title: "Senior Full Stack Engineer (HelloFresh)",
+        abstract: `Built the frontend of a food delivery application using React.js, managing state with Redux, and integrating the Socket.io to implement real-time order tracking and in-app chat. Designed the backend infrastructure using Node.js and Mongoose, implemented a secure authentication system with Passport.js and JWT, and customized middleware for efficient authorization checks.`,
         date: '2023-10-30',
         banner: '/static/3d-abstract-background-with-neon-lights.jpg',
     },
-    "Merge": {
-        title: "Full Stack Engineer (Merge)",
-        abstract: `Engineered an Apollo Server with Express to handle GraphQL requests, resulting in a 15% improvement in overall application speed. Led the optimization of the frontend codebase and database schema, contributing to the development of a responsive web-based application. Successfully resolved a critical production issue by conducting root cause analysis, collaborating with cross-functional teams, and implementing a solution, which resulted in a significant reduction in downtime.`,
+    "ClassPass": {
+        title: "Full Stack Engineer (ClassPass)",
+        abstract: `Constructed a fitness class booking page utilizing Next.js and Tailwind CSS, implemented code splitting and lazy loading to optimize performance, particularly when managing a large number of classes or equipment. Developed and maintained scalable RESTful APIs using Express.js to handle user authentication, class scheduling, and booking functionalities.`,
         date: '2021-07-10',
         banner: '/static/modern-futuristic-sci-fi-background.jpg'
     },
     "S&P Global": {
-        title: "Database Developer (S&P Global)",
-        abstract: `Designed optimized database schema and RESTful APIs, significantly improving data retrieval speed. Developed a high-performance backend system, resulting in a 15% increase in conversion rates and website traffic. Implemented Agile methodologies in project management, enabling the timely delivery of three major projects within tight deadlines. Collaborated with the DevOps team to implement CI/CD practices, resulting in reduced software release times.`,
+        title: "Back End Developer (S&P Global)",
+        abstract: `Engineered RESTful APIs to control cameras and sensors and manage user accounts in a Smart Home system using Express. Designed MongoDB databases with TLS/SSL encryption and implemented secure APIs with rigorous authentication to ensure robust security in communication between devices and the backend.`,
         date: '2019-04-30',
         banner: "/static/realistic-neon-lights-background.jpg"
     },
-    "Chewy": {
-        title: "Frontend Developer (Chewy)",
-        abstract: "Implemented unit tests and an automated testing platform, reducing bugs and enhancing overall project quality. Collaborated with the UI/UX team to define and implement a user-friendly experience, resulting in increased customer signups.",
+    "Rootstack": {
+        title: "Frontend Developer (Rootstack)",
+        abstract: "Engineered the Angular and Bootstrap-based frontend of a hospital website, integrating RxJS Observables to optimize data flow and enable real-time updates in the Medical Records Page and Appointment Scheduler. Engaged in Agile development methodologies, actively contributing to sprint planning, conducting regular stand- ups, and facilitating collaborative code reviews, thereby ensuring the punctual delivery of high-quality features.",
         date: '2017-08-30',
         banner: "/static/wavy-background-concept.jpg"
     },
-    "Anduril": {
-        title: "Full Stack Developer (Anduril)",
-        abstract: `Developed and deployed an e-commerce web application using the MERN Stack. Optimized applications, reducing page loading time and improving system performance by leveraging modern web technologies.`,
+    "Integris": {
+        title: "Full Stack Developer (Integris)",
+        abstract: `Designed and implemented responsive and user-friendly interfaces for a hotel booking web application using React.js and Tailwind CSS, ensuring a cohesive and intuitive browsing experience across diverse devices. Engineered robust backend APIs in Node.js and Express.js, seamlessly interfacing with MongoDB databases, and implemented strategic boosting and filtering for optimized property discovery, elevating user satisfaction and engagement.`,
         date: '2016-11-01',
         banner: "/static/modern-react-css-banner.jpg",
     },
     "Workwell": {
         title: "Web Developer (Workwell)",
-        abstract: `Contributed to the development and deployment of various e-commerce websites and booking applications. Collaborated with front-end developers to create user-friendly, high-performance applications.`,
+        abstract: `Contributed to developing and deploying diverse e-commerce websites through proficient use of WordPress and Shopify platforms. Architected and implemented databases, data storage solutions, and SQL queries, employing Sequelize to enhance data retrieval efficiency.`,
         date: '2015-04-30',
         banner: "/static/hello-world-banner.jpg"
     },
     "oDesk": {
         title: "Freelance Developer (oDesk)",
-        abstract: `Developed diverse web-based applications, enhancing user experience and usability. Collaborated closely with design teams, resulting in successful project updates.`,
+        abstract: `Designed and implemented a range of web pages using Angular, Bootstrap, Node.js, and AJAX, focusing on enhancing user experience and optimizing overall usability.`,
         date: '2013-04-20',
         banner: "/static/gradient-blue-background.jpg"
     },
