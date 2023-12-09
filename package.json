@@ -16,6 +16,8 @@
     "esbuild": "^0.15.2",
     "eslint": "^8.21.0",
     "eslint-config-next": "^12.2.5",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "fs-extra": "^10.1.0",
     "globby": "^13.1.2",
     "postcss": "^8.4.16",
@@ -37,6 +39,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "buffer-crc32": "^0.2.13",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "fd-slicer": "^1.1.0",
     "framer-motion": "^7.1.0",
     "mdx-bundler": "^9.0.1",
