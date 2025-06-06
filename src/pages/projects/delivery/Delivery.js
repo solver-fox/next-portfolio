@@ -39,48 +39,39 @@ export const Delivery = () => {
         <ProjectBackground
           srcSet={[backgroundSpr, backgroundSprLarge]}
           placeholder={backgroundSprPlaceholder}
-          opacity={0.2} sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-
+          opacity={0.2}
+          sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
         />
-        <ProjectHeader
-          title={title}
-          description={description}
-          url={url}
-          roles={roles}
-        />
+        <ProjectHeader title={title} description={description} url={url} roles={roles} />
         <ProjectSection
-          // backgroundElement={
-          //   <Image
-          //     srcSet={[imageSprLessonBuilderDark, imageSprLessonBuilderDarkLarge]}
-          //     placeholder={imageSprLessonBuilderDarkPlaceholder}
-          //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
-          //     sizes={`100vw`}
-          //   />
-          // }
-          >
+        // backgroundElement={
+        //   <Image
+        //     srcSet={[imageSprLessonBuilderDark, imageSprLessonBuilderDarkLarge]}
+        //     placeholder={imageSprLessonBuilderDarkPlaceholder}
+        //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
+        //     sizes={`100vw`}
+        //   />
+        // }
+        >
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
-            <ProjectSectionText>
-              {delivery.detail.problem}
-            </ProjectSectionText>
+            <ProjectSectionText>{delivery.detail.problem}</ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
         <ProjectSection
-          // backgroundElement={
-          //   <Image
-          //     srcSet={[recipeSpr, recipeSprLarge]}
-          //     placeholder={imageSprLessonBuilderDarkPlaceholder}
-          //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
-          //     sizes={`100vw`}
-          //   />
-          // }
-          >
+        // backgroundElement={
+        //   <Image
+        //     srcSet={[recipeSpr, recipeSprLarge]}
+        //     placeholder={imageSprLessonBuilderDarkPlaceholder}
+        //     alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
+        //     sizes={`100vw`}
+        //   />
+        // }
+        >
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                {delivery.detail.outcome}
-              </ProjectSectionText>
+              <ProjectSectionText>{delivery.detail.outcome}</ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>

@@ -1,9 +1,9 @@
-import gamestackTexture2Large from 'assets/ecommerce/slice-panel.png';
-import gamestackTexture2Placeholder from 'assets/ecommerce/slice-panel-placeholder.png';
-import gamestackTexture2 from 'assets/ecommerce/slice-panel.png';
-import gamestackTextureLarge from 'assets/ecommerce/slice-home.png';
-import gamestackTexturePlaceholder from 'assets/ecommerce/slice-home-placeholder.png';
-import gamestackTexture from 'assets/ecommerce/slice-home.png';
+import gamestackTexture2Large from 'assets/ecommerce/06.png';
+import gamestackTexture2Placeholder from 'assets/ecommerce/06.png';
+import gamestackTexture2 from 'assets/ecommerce/06.png';
+import gamestackTextureLarge from 'assets/ecommerce/05-1.png';
+import gamestackTexturePlaceholder from 'assets/ecommerce/05-1.png';
+import gamestackTexture from 'assets/ecommerce/05-1.png';
 import sliceTextureLarge from 'assets/hospital/home-placeholder.png';
 import sliceTexturePlaceholder from 'assets/hospital/home-placeholder.png';
 import sliceTexture from 'assets/hospital/home.png';
@@ -68,10 +68,7 @@ export const Home = () => {
 
   return (
     <div className={styles.home}>
-      <Meta
-        title={meta_title}
-        description={meta_description}
-      />
+      <Meta title={meta_title} description={meta_description} />
       <Intro
         id="intro"
         sectionRef={intro}
