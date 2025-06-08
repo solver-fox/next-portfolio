@@ -27,7 +27,7 @@ export const careers = {
   Education: {
     title: 'University of Texas at Dallas',
     abstract: 'Bachelor of Science in Computer Science',
-    date: '2012-05-30',
+    date: '2013-05-30',
     banner: '/static/glowing-pink-neon-frame.jpg',
   },
 };
