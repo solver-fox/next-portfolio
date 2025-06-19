@@ -23,13 +23,18 @@ export const navLinks = [
 
 export const socialLinks = [
   {
+    label: 'Twitter',
+    url: 'https://x.com/har65519',
+    icon: 'twitter',
+  },
+  {
     label: 'Github',
-    url: 'https://github.com/hcharles25',
+    url: 'https://bit.ly/slvfx-git',
     icon: 'github',
   },
   {
     label: 'Stackoverflow',
-    url: 'https://stackoverflow.com/users/22875576/hcharles25?tab=profile',
-    icon: 'stack'
-  }
+    url: 'https://bit.ly/slvfx-stack',
+    icon: 'stack',
+  },
 ];

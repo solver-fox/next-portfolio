@@ -36,37 +36,42 @@ export const project = {
 export const profile = {
   heading: 'Hi, there',
   description: [
-    'Full Stack Developer with over a decade of experience in crafting scalable web applications and decentralized blockchain solutions.',
-    'Proficient in both frontend and backend technologies, including JavaScript, Node.js, React, Solidity, and Web3.',
-    'Demonstrated ability to align technology solutions with business objectives in dynamic startup and enterprise settings.',
+    'Senior Full Stack Developer with 10+ years of experience building secure, scalable, and user-friendly web applications.',
+    'Specialized in modern frontend development using React and Next.js, with a strong foundation in backend architecture using Node.js, PostgreSQL, and GraphQL/REST APIs.',
+    'Proven success deploying cloud-native applications using AWS, Docker, and Vercel. Skilled in Web3 technologies including Solidity smart contract development, wallet authentication (MetaMask, WalletConnect), and blockchain integration.',
+    'Focused on clean architecture, performance optimization, and developer experience (DX).',
   ],
   imageAlt:
-    'Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan',
+    '',
 };
 
 export const skills = [
   {
     heading: 'Languages',
-    desc: 'JavaScript, TypeScript, Solidity, Rust, Python, PHP, SQL',
+    desc: 'JavaScript, TypeScript, Python, Go, Solidity, Rust, Java',
   },
   {
-    heading: 'Frameworks',
-    desc: 'Ethereum, Polygon, Hardhat, Web3.js, Ethers.js, IPFS',
+    heading: 'Frontend',
+    desc: 'React, Next.js, Tailwind CSS, Ethers.js, Web3.js'
+  },
+  {
+    heading: 'Backend',
+    desc: 'Node.js, Express, PostgreSQL, MongoDB, GraphQL, REST, Redis'
+  },
+  {
+    heading: 'DevOps',
+    desc: 'AWS (EC2, S3, Lambda, RDS), Docker, Vercel, GitHub Actions, Terraform'
+  },
+  {
+    heading: 'Blockchain',
+    desc: 'Hardhat, Truffle, Foundry, Wagmi, MetaMask'
   },
   {
     heading: 'Databases',
     desc: 'MongoDB, PostgreSQL, MySQL, Firebase',
   },
   {
-    heading: 'Tools',
-    desc: 'Git, Docker, AWS, Truffle, Ganache, CI/CD',
-  },
-  {
     heading: 'Soft Skills',
     desc: 'Agile/Scrum, Problem-solving, Code reviews, Technical leadership',
-  },
-  {
-    heading: 'Interests',
-    desc: 'Artificial Intelligence, Embeded Device, OS & Network, Mathematics',
   },
 ];

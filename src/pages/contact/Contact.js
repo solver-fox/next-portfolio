@@ -15,6 +15,7 @@ import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import emailjs from "@emailjs/browser";
 import styles from './Contact.module.css';
+import ScheduleButton from './ScheduleButton';
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -140,6 +141,7 @@ export const Contact = () => {
           </form>
         )}
       </Transition>
+      <ScheduleButton />
       <Transition unmount in={complete}>
         {(visible, status) => (
           <div className={styles.complete} aria-live="polite">
