@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
+import Chatbot from 'components/Chatbot';
 
 export const AppContext = createContext({});
 
@@ -78,6 +79,7 @@ const App = ({ Component, pageProps }) => {
                 </m.div>
               </AnimatePresence>
             </main>
+            <Chatbot />
           </Fragment>
         </LazyMotion>
       </ThemeProvider>
