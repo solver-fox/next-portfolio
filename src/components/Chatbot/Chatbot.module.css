@@ -103,7 +103,6 @@
   max-height: 104px;
   overflow-y: auto;
   scrollbar-width: none;
-  ms-overflow-style: none;
 }
 .textarea::-webkit-scrollbar {
   display: none;
