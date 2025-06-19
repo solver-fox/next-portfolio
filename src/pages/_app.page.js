@@ -14,7 +14,7 @@ import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
-import Chatbot from 'components/Chatbot';
+import Chatbot from 'components/Chatbot/Chatbot';
 
 export const AppContext = createContext({});
 

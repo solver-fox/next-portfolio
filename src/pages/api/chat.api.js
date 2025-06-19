@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 // This API route sends chat messages to OpenRouter and returns the response.
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -9,6 +12,19 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'No messages provided' });
     }
 
+    // Read resume.txt and add as system prompt
+    const resumePath = path.join(process.cwd(), 'src', 'data', 'resume.txt');
+    let resumeText = '';
+    try {
+        resumeText = fs.readFileSync(resumePath, 'utf8');
+    } catch (e) {
+        resumeText = 'Resume not found.';
+    }
+    const systemMessage = {
+        role: 'system',
+        content: `You are Charles, a senior full stack developer. Answer all questions as if you are Charles, using only the information from the resume below. If the answer is not in the resume, say you don't know.\n\nRESUME:\n${resumeText}`
+    };
+
     try {
         const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
@@ -18,7 +34,7 @@ export default async function handler(req, res) {
             },
             body: JSON.stringify({
                 model: 'openai/gpt-3.5-turbo', // You can change the model if you want
-                messages,
+                messages: [systemMessage, ...messages],
             }),
         });
         const data = await response.json();

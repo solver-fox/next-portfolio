@@ -1,0 +1,122 @@
+Git: https://bit.ly/slvfx-git
+Stack: https://bit.ly/slvfx-stack
+Twitter: https://x.com/har65519
+Web: https://slvfx.tech
+
+
+Here's an **ATS-optimized** version of your resume with the requested skills integrated thoughtfully throughout. It maintains your impressive experience while enhancing **keyword richness** for better visibility in applicant tracking systems:
+
+---
+
+# **Senior Full Stack Developer | Web3 & Cloud Specialist**
+
+🔧 **10+ years of experience** building secure, scalable, and user-centered web applications using **JavaScript, React, Node.js, and cloud-native architecture**. Expert in **blockchain development**, **smart contracts**, and modern **DevOps** pipelines. Proven ability to collaborate cross-functionally in **Agile** environments and lead projects from design to deployment.
+
+---
+
+## 🧠 **Professional Summary**
+
+Versatile Senior Full Stack Developer with over a decade of experience in architecting full-cycle web and dApp platforms. Highly proficient in **React**, **Next.js**, **Node.js**, **Redux**, and **Solidity**, with hands-on experience in **AWS**, **Kubernetes**, **Docker**, and **Azure**. Adept at building **RESTful and GraphQL APIs**, integrating **blockchain protocols**, and delivering solutions using **SQL/NoSQL**, **Kafka**, and **FastAPI**. Strong communicator with a focus on **developer experience**, **performance optimization**, and **user-centered design**.
+
+---
+
+## 💼 **Professional Experience**
+
+### **Senior Full Stack Developer**
+
+**QIT Software** — Remote
+*Aug 2022 – May 2025*
+
+* Developed a Web3 portfolio platform for developers; built wallet auth flows using **MetaMask** and **WalletConnect**.
+* Integrated **Solidity** smart contracts and optimized dApp gas usage.
+* Architected dynamic dashboards with **React**, **Vite**, and **Tailwind CSS**, focusing on **responsive design** and performance.
+* Scaled cloud functions via **AWS Lambda**, **CloudWatch**, and **Serverless** deployments.
+* Implemented API monitoring, GitHub Actions CI/CD, and collaborated cross-functionally with product, design (via **Figma**), and QA teams.
+
+**Skills:** React, Next.js, Redux, Solidity, Node.js, AWS, PostgreSQL, JSON, Tailwind, Vercel, Agile, Git, REST, GraphQL, SaaS, Figma, Ethers.js, Serverless
+
+---
+
+### **Full Stack Engineer**
+
+**Webbuggs** — Remote, CA
+*Nov 2019 – Jul 2023*
+
+* Migrated SPA to SSR-enabled **Next.js** app with **Redux** state management and optimized routing.
+* Built NFT minting UX flows with **Coinbase** and **MetaMask** wallet integrations.
+* Created **GraphQL APIs**, consuming smart contract data and real-time blockchain events.
+* Designed CI/CD pipelines on **AWS ECS** using **Docker**, **GitHub Actions**, and IaC.
+* Contributed to DevOps with **Kafka**, **DynamoDB**, and microservice orchestration.
+
+**Skills:** React, GraphQL, Node.js, Docker, AWS ECS, DynamoDB, Solidity, GitHub Actions, TypeScript, Kafka, CMS, Agile, JSON, SQL, NoSQL
+
+---
+
+### **Blockchain Developer (Contract)**
+
+**QuickNode** — Miami, FL
+*May 2018 – Sep 2019*
+
+* Developed Ethereum smart contracts using **Solidity**, **Truffle**, and **Hardhat**.
+* Integrated dApps with **IPFS**, **Web3.js**, and real-time event subscriptions.
+* Wrote technical documentation, including **PRDs**, user flows, and whitepaper specs.
+* Collaborated with frontend teams on blockchain event handling, UX testing, and performance optimizations.
+
+**Skills:** Solidity, Web3.js, Smart Contracts, IPFS, MetaMask, Hardhat, JSON, Agile, Documentation, Communication Skills
+
+---
+
+### **Full Stack Developer**
+
+**HyperVerge** — Austin, TX
+*Jun 2015 – Mar 2018*
+
+* Built internal apps and dashboards with **React**, **Express.js**, and **PostgreSQL**.
+* Developed scalable **REST APIs**, configured **AWS RDS/EC2/S3**, and implemented CI/CD with **Jenkins**.
+* Led initiatives in **data architecture** and infrastructure-as-code using **Terraform**.
+* Participated in cross-functional Agile teams for roadmap planning and feature delivery.
+
+**Skills:** React, PostgreSQL, REST, Express.js, AWS, Docker, Jenkins, Terraform, API, JSON, SQL, Agile, Kubernetes, Communication Skills
+
+---
+
+### **Web Developer**
+
+**Bytes Technolab Inc.** — San Jose, CA
+*Jul 2013 – Apr 2015*
+
+* Developed dynamic websites using **PHP**, **Laravel**, **CodeIgniter**, and **MySQL**.
+* Customized **CMS platforms** like **WordPress**, implemented tracking tools, and optimized SEO.
+* Integrated frontend UI with backend logic and conducted A/B testing to improve UX.
+* Supported client onboarding and provided maintenance training.
+
+**Skills:** PHP, Laravel, CMS, HTML5, CSS3, jQuery, MySQL, UX, SEO, Responsive Design
+
+---
+
+## 🧠 **Technical Skills**
+
+| **Category**      | **Skills**                                                                                                           |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Languages**     | JavaScript, TypeScript, Go, Python, Java, Solidity, SQL, NoSQL, JSON                                                 |
+| **Frontend**      | React, Next.js, Redux, HTML5, Tailwind CSS, Web3.js, Ethers.js, Figma, Responsive Design                             |
+| **Backend**       | Node.js, Express.js, FastAPI, GraphQL, REST, PostgreSQL, MongoDB, Kafka                                              |
+| **DevOps/Cloud**  | AWS (Lambda, EC2, S3, RDS, DynamoDB), Azure, Docker, Kubernetes, GitHub Actions, Terraform, Serverless Framework     |
+| **Blockchain**    | Solidity, Hardhat, Truffle, MetaMask, WalletConnect, NFT integration, IPFS                                           |
+| **Testing/Tools** | Jest, Cypress, React Testing Library, Git, Vite, Webpack, Postman, Figma                                             |
+| **Soft Skills**   | Communication, Cross-functional Collaboration, Problem-Solving, Attention to Detail *(optional traits also covered)* |
+
+---
+
+## 🎓 **Education**
+
+**B.Sc. in Computer Science**
+*University of Texas at Dallas* | Aug 2009 – May 2013
+Relevant Coursework: Data Structures, Cryptography, Distributed Systems, NLP, Web Development
+
+---
+
+## 📜 **Certifications**
+
+* **IBM Full‑Stack Software Developer Professional Certificate** — Coursera / IBM, *Feb 2019*
+* **Certified Blockchain Expert (CBE)** — Blockchain Council, *Aug 2022*
