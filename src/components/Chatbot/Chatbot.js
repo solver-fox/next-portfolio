@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import { Icon } from 'components/Icon';
 import styles from './Chatbot.module.css';
 
 const Chatbot = () => {
@@ -110,7 +110,7 @@ const Chatbot = () => {
         </>
       ) : (
         <button onClick={() => setOpen(true)} className={styles.avatarButton}>
-          <Image src="/static/chatbot.png" alt="Chatbot" width={48} height={48} className={styles.avatarImg} />
+          <Icon className={styles.icon} icon="bot" />
         </button>
       )}
     </div>

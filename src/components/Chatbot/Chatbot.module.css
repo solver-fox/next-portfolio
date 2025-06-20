@@ -60,11 +60,6 @@
   padding: 0;
 }
 
-.avatarImg {
-  width: 48px;
-  height: 48px;
-}
-
 .header {
   background: #222;
   color: #fff;
@@ -157,4 +152,13 @@
   padding: 8px 14px;
   max-width: 80%;
   word-break: break-word;
+}
+
+.icon {
+  transition: color var(--durationM) var(--bezierFastoutSlowin);
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgb(var(--rgbAccent));
+  }
 }

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import styles from './ScheduleButton.module.css';
+import { Icon } from 'components/Icon';
 
 const ScheduleButton = () => {
     const [showModal, setShowModal] = useState(false);
@@ -29,81 +31,22 @@ const ScheduleButton = () => {
 
     return (
         <>
-            <img
+            <button
                 onClick={handleClick}
-                src={"/schedule.png"}
-                alt="Schedule time with me"
-                style={{
-                    background: 'none',
-                    border: 'none',
-                    padding: 0,
-                    cursor: 'pointer',
-                    position: 'absolute',
-                    right: '18px',
-                    bottom: '100px',
-                    transition: "transform 0.5s",
-                    width: '70px',
-                    height: '70px',
-                }}
-            />
+                className={styles.scheduleBtn}
+                aria-label="Schedule time with me"
+            >
+                <Icon className={styles.icon} icon="calendar" />
+            </button>
             {showModal && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    width: '100vw',
-                    height: '100vh',
-                    background: 'rgba(0,0,0,0.35)',
-                    zIndex: 2000,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}>
-                    <div style={{
-                        background: '#fff',
-                        borderRadius: 10,
-                        boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-                        width: '95vw',
-                        maxWidth: 700,
-                        height: '90vh',
-                        maxHeight: 'none',
-                        overflow: 'visible',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        position: 'relative',
-                    }}>
-                        <button onClick={handleClose} style={{
-                            position: 'absolute',
-                            top: 12,
-                            right: 16,
-                            background: '#fff',
-                            border: '2px solid #888',
-                            borderRadius: '50%',
-                            width: 40,
-                            height: 40,
-                            fontSize: 24,
-                            color: '#222',
-                            cursor: 'pointer',
-                            zIndex: 2,
-                            boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            transition: 'background 0.2s, border 0.2s',
-                        }}
-                            aria-label="Close schedule modal"
-                        >
-                            <span style={{ fontWeight: 700, fontSize: 28, lineHeight: 1 }}>&times;</span>
+                <div className={styles.scheduleModalOverlay}>
+                    <div className={styles.scheduleModal}>
+                        <button onClick={handleClose} className={styles.scheduleCloseBtn} aria-label="Close schedule modal">
+                            <span>&times;</span>
                         </button>
                         <iframe
                             src="https://calendly.com/charleshardy1225/new-meeting?embed_domain=localhost&embed_type=Inline"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                border: 'none',
-                                overflow: 'visible',
-                                display: 'block',
-                            }}
+                            className={styles.scheduleIframe}
                             title="Schedule time with me"
                             scrolling="auto"
                         />

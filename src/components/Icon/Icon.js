@@ -16,6 +16,8 @@ import Play from './svg/play.svg';
 import Send from './svg/send.svg';
 import Twitter from './svg/twitter.svg';
 import Stack from './svg/stack.svg';
+import Chatbot from './svg/chatbot.svg';
+import Calendar from './svg/calendar.svg';
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -33,7 +35,9 @@ export const icons = {
   play: Play,
   send: Send,
   twitter: Twitter,
-  stack: Stack
+  stack: Stack,
+  bot: Chatbot,
+  calendar: Calendar
 };
 
 export const Icon = ({ icon, className, ...rest }) => {
