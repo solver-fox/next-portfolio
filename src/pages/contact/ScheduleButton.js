@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const ScheduleButton = () => {
-    const [isHovered, setIsHovered] = useState(false);
     const [showModal, setShowModal] = useState(false);
     useEffect(() => {
         const link = document.createElement("link");
@@ -30,43 +29,23 @@ const ScheduleButton = () => {
 
     return (
         <>
-            <button
+            <img
                 onClick={handleClick}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                src={"/schedule.png"}
+                alt="Schedule time with me"
                 style={{
-                    background: 'white',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: 16,
-                    boxShadow: isHovered ? '0 4px 24px rgba(0,0,0,0.18)' : '0 2px 8px rgba(0,0,0,0.10)',
+                    background: 'none',
+                    border: 'none',
                     padding: 0,
                     cursor: 'pointer',
                     position: 'absolute',
-                    right: '100px',
+                    right: '18px',
                     bottom: '100px',
-                    transition: 'transform 0.3s, box-shadow 0.3s',
-                    transform: isHovered ? 'scale(1.08)' : 'scale(1)',
-                    width: '88px',
-                    height: '88px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    transition: "transform 0.5s",
+                    width: '70px',
+                    height: '70px',
                 }}
-                aria-label="Schedule time with me"
-            >
-                <img
-                    src={"/schedule.png"}
-                    alt="Schedule time with me"
-                    style={{
-                        width: '60%',
-                        height: '60%',
-                        objectFit: 'contain',
-                        borderRadius: 12,
-                        boxShadow: isHovered ? '0 2px 8px rgba(0,0,0,0.10)' : 'none',
-                        background: 'none',
-                    }}
-                />
-            </button>
+            />
             {showModal && (
                 <div style={{
                     position: 'fixed',
@@ -112,9 +91,9 @@ const ScheduleButton = () => {
                             justifyContent: 'center',
                             transition: 'background 0.2s, border 0.2s',
                         }}
-                        aria-label="Close schedule modal"
+                            aria-label="Close schedule modal"
                         >
-                            <span style={{fontWeight: 700, fontSize: 28, lineHeight: 1}}>&times;</span>
+                            <span style={{ fontWeight: 700, fontSize: 28, lineHeight: 1 }}>&times;</span>
                         </button>
                         <iframe
                             src="https://calendly.com/charleshardy1225/new-meeting?embed_domain=localhost&embed_type=Inline"
