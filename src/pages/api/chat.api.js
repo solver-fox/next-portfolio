@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const OPENROUTER_API_KEY = "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"
+const OPENROUTER_API_KEY = "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"
 
 
 // This API route sends chat messages to OpenRouter and returns the response.
