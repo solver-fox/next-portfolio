@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
+const OPENROUTER_API_KEY = "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"
+
+
 // This API route sends chat messages to OpenRouter and returns the response.
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -30,7 +33,7 @@ export default async function handler(req, res) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
             },
             body: JSON.stringify({
                 model: 'openai/gpt-3.5-turbo', // You can change the model if you want
