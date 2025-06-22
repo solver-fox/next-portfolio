@@ -3,6 +3,7 @@ import path from 'path';
 
 // This API route sends chat messages to OpenRouter and returns the response.
 export default async function handler(req, res) {
+    res.status(200).json({ message: 'Hello from API' });
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
