@@ -3,20 +3,13 @@ import path from 'path';
 
 // This API route sends chat messages to OpenRouter and returns the response.
 export default async function handler(req, res) {
-    if (req.method !== 'GET') {
+    if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { messages } = req.query;
+    const { messages } = req.body;
     if (!messages) {
         return res.status(400).json({ error: 'No messages provided' });
-    }
-
-    let parsedMessages;
-    try {
-        parsedMessages = JSON.parse(messages);
-    } catch (e) {
-        return res.status(400).json({ error: 'Invalid messages format. Must be JSON.' });
     }
 
     // Read resume.txt and add as system prompt
@@ -41,7 +34,7 @@ export default async function handler(req, res) {
             },
             body: JSON.stringify({
                 model: 'openai/gpt-3.5-turbo', // You can change the model if you want
-                messages: [systemMessage, ...parsedMessages],
+                messages: [systemMessage, ...messages],
             }),
         });
         const data = await response.json();
