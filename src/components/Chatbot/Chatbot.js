@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Icon } from 'components/Icon';
 import styles from './Chatbot.module.css';
 
+const OPENROUTER_API_KEY = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
+const RESUME_TEXT = `Put your resume text here or fetch it from a public endpoint if needed.`;
+
 const Chatbot = () => {
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
@@ -36,19 +39,28 @@ const Chatbot = () => {
     setMessages(newMessages);
     setInput('');
     try {
-      const res = await fetch('/api/chat', {
+      const systemMessage = {
+        role: 'system',
+        content: `You are Charles, a senior full stack developer. Answer all questions as if you are Charles, using only the information from the resume below. If the answer is not in the resume, say you don't know.\n\nRESUME:\n${RESUME_TEXT}`
+      };
+      const apiMessages = newMessages.map(m => ({
+        role: m.from === 'user' ? 'user' : 'assistant',
+        content: m.text,
+      }));
+      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        },
         body: JSON.stringify({
-          messages: newMessages.map(m => ({
-            role: m.from === 'user' ? 'user' : 'assistant',
-            content: m.text,
-          }))
+          model: 'openai/gpt-3.5-turbo',
+          messages: [systemMessage, ...apiMessages],
         })
       });
       const data = await res.json();
-      if (data.reply) {
-        setMessages(msgs => [...msgs, { from: 'bot', text: data.reply }]);
+      if (data.choices && data.choices[0] && data.choices[0].message) {
+        setMessages(msgs => [...msgs, { from: 'bot', text: data.choices[0].message.content }]);
       } else {
         setMessages(msgs => [...msgs, { from: 'bot', text: 'Sorry, no reply from AI.' }]);
       }
