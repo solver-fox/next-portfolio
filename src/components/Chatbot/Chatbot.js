@@ -36,16 +36,12 @@ const Chatbot = () => {
     setMessages(newMessages);
     setInput('');
     try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: newMessages.map(m => ({
-            role: m.from === 'user' ? 'user' : 'assistant',
-            content: m.text,
-          }))
-        })
-      });
+      const query = encodeURIComponent(JSON.stringify(newMessages.map(m => ({
+        role: m.from === 'user' ? 'user' : 'assistant',
+        content: m.text,
+      }))));
+
+      const res = await fetch(`/api/chat?messages=${query}`);
       const data = await res.json();
       if (data.reply) {
         setMessages(msgs => [...msgs, { from: 'bot', text: data.reply }]);
